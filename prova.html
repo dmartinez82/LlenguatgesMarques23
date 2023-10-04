@@ -11,15 +11,32 @@
     <h1>LA MEVA PÀGINA WEB</h1>
     <h3>Subtítol</h3>
 
-    <table border="1">
-        <tr>
-            <td>Dada 1</td>
-            <td>Dada 2</td>
-            <td>Dada 3</td>
+    <table border="4">
+        <thead>
             <tr>
-                <td>Dada 4</td>
+                <th>Cap 1</th>
+                <th>Cap 2</th>
+                <th>Cap 3</th>
+                <th>Cap 4</th>
             </tr>
-        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">CERO</td>
+                <td>Dada 1</td>
+                <td>Dada 2</td>
+                <td>Dada 3</td>
+            </tr>
+            <tr>
+                <td colspan="2"><center>Dada 4</center></td>
+                <td>Dada 5</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="4">peu de taula</td>
+        </tfoot>
+
+        
        
     </table>
 
