@@ -8,12 +8,14 @@
 </head>
 
 <body>
-    <div>
-        <h1>LA MEVA PÀGINA WEB</h1>
-        <h3>Subtítol</h3>
-    </div>
-    
-    <div>
+    <header>
+        <div>
+            <h1>LA MEVA PÀGINA WEB</h1>
+            <h3>Subtítol</h3>
+        </div>
+    </header>
+
+    <main>
         <table border="4">
             <thead>
                 <tr>
@@ -31,7 +33,9 @@
                     <td>Dada 3</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><center>Dada 4</center></td>
+                    <td colspan="2">
+                        <center>Dada 4</center>
+                    </td>
                     <td>Dada 5</td>
                 </tr>
             </tbody>
@@ -43,35 +47,37 @@
         <span>Texto de prueba para probar lo que es un span</span>
         <span>Texto de prueba para probar lo que es un span</span>
 
-        <p>Pruebas de p. Dentro de este P podemos poner un <small>span para diferenciarlo</small></p>
-    
+        <p>Pruebas de p. Dentro de este P podemos poner un <strong>span para diferenciarlo</strong></p>
+
         <img src="./img/playa.jpg" alt="Una moto" width="400" title="Dani en moto">
         <img src="./img/playa.jpg" alt="Una moto" width="400" title="Dani en moto">
-    
+
         <p>Això és un paràgraf 3</p>
         <hr>
         <i>Texte en cursiva</i>
         <br>
         <a href="https://www.yahoo.es" target="_blank">Google &copy; &#1421;</a>
-    </div>
+        <hr>
 
-    <hr>
+        <div>
+            <ol>
+                <li>Primer Element</li>
+                <li>Segon Element
+                    <ol>
+                        <li>Primer Element</li>
+                        <li>Segon Element</li>
+                        <li>Tercer Element</li>
+                    </ol>
+                </li>
+                <li>Tercer Element</li>
+            </ol>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        &copy; Daniel Martínez
+    </footer>
 
-    <div>
-        <ol>
-            <li>Primer Element</li>
-            <li>Segon Element
-                <ol>
-                    <li>Primer Element</li>
-                    <li>Segon Element</li>
-                    <li>Tercer Element</li>
-                </ol>
-            </li>
-            <li>Tercer Element</li>
-        </ol>
-    </div>
-
-    <hr>
 
 </body>
 
