@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proves Formulari</title>
+</head>
+
+<body>
+
+    <header>
+        <h2>Formulari</h2>
+
+        <hr>
+    </header>
+
+    <main>
+        <div>
+            <form action="" method="GET">
+                <p>
+                    <label for="nom"><strong>Nom<sup>*</sup></strong></label>
+                    <input type="text" name="nom" id="nom" minlength="3" maxlength="10" required
+                        placeholder="El teu nom" title="Escriu aquí el teu nom" autocomplete="off">
+                </p>
+                <p>
+                    <label for="llin1"><strong>1er llinatge:</strong></label>
+                    <input type="text" name="llin1" id="llin1" maxlength="10">
+                </p>
+                <p>
+                    <label for="edad"><strong>Edad:</strong></label>
+                    <input type="number" name="edad" id="edad" max="130" min="18">
+                </p>
+                
+                <p>
+                    <label for="dataNaix"><strong>Data Naixement:</strong></label>
+                    <input type="date" name="dataNaix" id="dataNaix" min="2023-01-01" max="2023-12-31">
+                </p>
+                <p>
+                    <input type="submit" value="Envia">
+                </p>
+
+                <span>Els camps marcats amb * són obligatoris.</span>
+
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
