@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Daniel Martínez">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/proves.css">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
         <table border="4">
             <thead>
                 <tr>
-                    <th>Cap 1</th>
+                    <th class="primeraCella">Cap 1</th>
                     <th>Cap 2</th>
                     <th>Cap 3</th>
                     <th>Cap 4</th>
@@ -28,20 +29,20 @@
             </thead>
             <tbody>
                 <tr>
-                    <td rowspan="2">CERO</td>
+                    <td rowspan="2" class="primeraCella">CERO</td>
                     <td>Dada 1</td>
                     <td>Dada 2</td>
                     <td>Dada 3</td>
                 </tr>
                 <tr>
-                    <td colspan="2">
+                    <td colspan="2" >
                         <center>Dada 4</center>
                     </td>
                     <td>Dada 5</td>
                 </tr>
             </tbody>
             <tfoot>
-                <td colspan="4">peu de taula</td>
+                <td colspan="4" class="primeraCella" id="peu">peu de taula</td>
             </tfoot>
         </table>
 
@@ -77,7 +78,9 @@
     <footer>
         <hr>
         &copy; Daniel Martínez
-        <a href="./index.html">Tornar</a>
+        <span>
+            <a href="./index.html">Tornar</a>
+        </span>
     </footer>
 
 

@@ -1,0 +1,31 @@
+body {
+    background-image: radial-gradient(cyan 0%, lightyellow 40%, lightsalmon 80%);
+}
+
+td{
+    color: orange;
+}
+
+.primeraCella {
+    color: blue;
+}
+
+#peu{
+    color: rgba(26, 90, 105, 0.378);
+    font-weight: bolder;
+}
+
+footer a{ 
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+h1{
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: x-small;
+}
+
+img {
+    opacity: radial-gradient(circle at center, red 0, blue, green 100%);
+}
