@@ -17,15 +17,31 @@
 
     <main>
         <div>
-            <form action="" method="GET">
+            <form action="./index.html" method="GET">
+
                 <p>
-                    <label for="nom"><strong>Nom<sup>*</sup></strong></label>
-                    <input type="text" name="nom" id="nom" minlength="3" maxlength="10" required
+                    <label for="selTractament">Tractament</label>
+                    <select name="selTractament" id="selTractament" required>
+                        <option value="">Selecciona</option>
+                        <optgroup label="Tractaments">
+                            <option value="1">Mr.</option>
+                            <option value="2" selected>Mrs.</option>
+                        </optgroup>
+                        
+                        <option value="3">None</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label><strong>Nom<sup>*</sup></strong>
+                        <input type="text" name="nom" id="nom" minlength="3" maxlength="10" required
                         placeholder="El teu nom" title="Escriu aquí el teu nom" autocomplete="off">
+                    </label>
+                    
                 </p>
                 <p>
                     <label for="llin1"><strong>1er llinatge:</strong></label>
-                    <input type="text" name="llin1" id="llin1" maxlength="10">
+                    <input type="text" name="llin1" id="llin1" maxlength="10" disabled>
                 </p>
                 <p>
                     <label for="edad"><strong>Edad:</strong></label>
@@ -58,7 +74,7 @@
                     <input type="radio" name="estadoCivil" id="divorciado" value="D">
                     <label for="divorciado"><strong>Divorciado</strong></label>
 
-                    <input type="file" name="" id="">
+                    <input type="file" name="fitxer" id="fitxer">
                 </p>
                 <p>
                     <input type="submit" value="Envia">
@@ -66,6 +82,12 @@
                 </p>
 
                 <span>Els camps marcats amb * són obligatoris.</span>
+
+                <p>
+                    <label for="observacions">Observacions</label>
+                    <br>
+                    <textarea name="observacions" id="observacions" cols="60" rows="10" style="resize: none;"></textarea>
+                </p>
 
             </form>
         </div>
