@@ -1,5 +1,7 @@
 body {
     background-image: radial-gradient(cyan 0%, lightyellow 40%, lightsalmon 80%);
+    margin: 0;
+    padding: 0;
 }
 
 td{
@@ -27,5 +29,32 @@ h1{
 }
 
 img {
-    opacity: radial-gradient(circle at center, red 0, blue, green 100%);
+    margin: 0 10px 5px 5px;
+}
+
+
+h3.subtitol{
+    color: white;
+}
+
+h3{
+    border: 2px solid yellow;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    margin: 50px;
+    padding: 15px;
+    width: 60%;
+    border-color: orangered;
+    border-color: black;
+    color: red;
+}
+
+
+h3 p {
+    width: 60%;
+}
+
+.sinborde {
+    border-width: 0;
 }
