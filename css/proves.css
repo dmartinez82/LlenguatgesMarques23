@@ -4,59 +4,117 @@ body {
     padding: 0;
 }
 
-td{
+main{
+    margin: 0 15vw;
+}
+
+td {
     color: orange;
 }
 
 .primeraCella {
-    color: blue;
-}
-
-#peu{
-    color: rgba(26, 90, 105, 0.378);
+    color: blue !important;
     font-weight: bolder;
+    font-size: x-large;
 }
 
-footer a{ 
+#peu {
+    color: rgb(186, 209, 57) !important;
+}
+
+footer a {
     text-decoration: none;
     font-size: xx-large;
 }
 
-h1{
+h1 {
     text-decoration: none;
     font-weight: lighter;
-    font-size: x-small;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    margin: 0;
 }
 
 img {
     margin: 0 10px 5px 5px;
 }
 
-
-h3.subtitol{
+h3.subtitol {
     color: white;
 }
 
-h3{
+h3.subtitol::after {
+    /*content: "contingut de prova";*/
+}
+
+div>h3 {
     border: 2px solid yellow;
     border-color: black;
     border-style: solid;
     border-width: 2px;
-    margin: 50px;
-    padding: 15px;
-    width: 60%;
+    padding: 50px;
+    width: 50%;
     border-color: orangered;
     border-color: black;
     color: red;
+    margin: 40px auto;
+    text-align: center;
 
     & p {
-        width: 60%;
+        width: 40%;
         background-color: blue;
+        text-align: center;
     }
 }
 
-
-
 .sinborde {
     border-width: 0;
+}
+
+.sinborde:hover {
+    color: pink;
+    cursor: progress;
+}
+
+.segundo {
+    color: blue;
+    color: green;
+}
+
+.primero {
+    color: red;
+}
+
+strong {
+    width: 300px;
+    font-weight: bolder;
+}
+
+.izq{
+    float: left;
+}
+
+.der {
+    float: right;
+}
+
+footer > span{
+    float: right;
+}
+
+table, td, th{
+    border: 1px solid black;
+    border-spacing: 0;
+}
+
+.justificat{
+    text-align: justify;
+}
+
+.justificat::first-letter{
+    font-size: xx-large;
+    color: rgb(88, 78, 145);
 }
