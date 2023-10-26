@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: crimson;
+    height: 15vh;
+    color: white;
+    text-align: center;
+    padding: 5vh;
+    box-sizing: border-box;
+}
+
+main{
+    height: 75vh;
+}
+
+footer{
+    height: 10vh;
+    background-color: crimson;
+}
+
+.izq{
+    width: 75%;
+    background-color: gray;
+}
+
+.der{
+    width: 25%;
+    background-color: aquamarine;
+}
+
+.izq, .der {
+    float: left;
+    height: 100%;
+}
+
+aside h1{
+    background-color: darkkhaki;
+    margin: 0;
+    padding: 0;
+    font-size: xx-large;
+    text-align: center;
+    padding: 15px;
+}
+
+.cajaCentral{
+    width: 75%;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.cajaCentral article{
+    width: calc(50% - 2px);
+    border: 1px solid black;
+    float: left;
+    background-color: white;
+}
