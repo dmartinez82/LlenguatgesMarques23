@@ -49,11 +49,14 @@ aside h1{
     width: 75%;
     margin: 25px auto;
     text-align: center;
+    border: 1px solid black;
+    overflow: auto; /* Fa que el contenidor tingui alçada quan tots els seus elements són flotants, com ara és el cas */
+    background-color: white;
 }
 
 .cajaCentral article{
-    width: calc(50% - 2px);
+    width: calc(50% - 2px - 20px); /* 50% perquè volem 2 elements per fila, -2px del border (un de cada costat) -20 px del margin (10 per cada costat)*/
     border: 1px solid black;
     float: left;
-    background-color: white;
+    margin: 10px;
 }
