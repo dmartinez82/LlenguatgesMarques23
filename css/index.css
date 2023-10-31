@@ -29,3 +29,11 @@ li.secret:hover a{
 ::selection{
     background-color: unset;
 }
+
+img{
+    width: 15%;
+    min-width: 100px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
