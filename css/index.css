@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
+
+
 body{
     margin: 0;
     box-sizing: border-box;
     background-color: blanchedalmond;
     font-size: larger;
-    font-family: 'Courier New', Courier, monospace;
     padding: 10vh 20vw;
     height: 100vh;
+    font-family: 'Oregano', cursive;
 }
 
 li{
