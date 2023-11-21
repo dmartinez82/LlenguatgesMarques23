@@ -118,3 +118,13 @@ table, td, th{
     font-size: xx-large;
     color: rgb(88, 78, 145);
 }
+
+@media print {
+    body {
+      background-image: none;
+    }
+
+    h1{
+        display: none;
+    }
+  }

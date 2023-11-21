@@ -41,6 +41,7 @@ div.lorems{
 }
 
 div.lorems p{
+    text-align: justify;
     width: 40%;
 }
 
@@ -56,4 +57,17 @@ footer{
     display: flex;
     justify-content: end;
     align-items: center;
+}
+
+
+@media screen and (max-width: 800px){
+    div.lorems{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.lorems p{
+        width: 90%;
+    }
+
 }
