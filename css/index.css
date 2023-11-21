@@ -2,6 +2,8 @@
 
 :root {
     --colorBody: blanchedalmond;
+    --colorOmbra: gray;
+    --sombra: 2px 2px 4px var(--colorOmbra);
   }
 
 body{
@@ -22,6 +24,7 @@ li{
 h2{
     text-transform: uppercase;
     transition: color 1s;
+    text-shadow: var(--sombra);
 }
 
 h2:hover {
