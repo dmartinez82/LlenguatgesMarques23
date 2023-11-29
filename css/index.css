@@ -19,6 +19,7 @@ body{
 li{
     list-style-type: lower-greek;
     width: 40vw;
+    min-width: 200px;
 }
 
 h2{
@@ -31,13 +32,23 @@ h2:hover {
     color: red;
 }
 
+li{
+    transition: all 1s;
+}
+
+li:hover{
+    transform: skewX(-30deg);
+}
+
 li.secret a{
     visibility: hidden;
+
 }
 
 li.secret:hover a{
     visibility: visible;
     cursor: none;
+
 }
 
 ::selection{
@@ -50,7 +61,8 @@ img{
     position: absolute;
     top: 15px;
     left: 15px;
-    z-index: -1;
+    z-index: 1;
+    animation: vueltas 2s;
 }
 
 
@@ -62,4 +74,24 @@ div.banner{
     background-size: cover;
     text-align: center;
     line-height: 40px;
+
+
+}
+
+@keyframes vueltas {
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+}
+
+#corazonLleno{
+    display: none;
+}
+
+#corazones:hover #corazonLleno{
+    display: inline;
+}
+
+
+#corazones:hover #corazonVacio{
+    display: none;
 }
