@@ -37,37 +37,28 @@ div.lorems{
     flex-direction: row;
     justify-content: space-evenly;
     background-color: cadetblue;
-    flex-grow: 2;
+    flex-wrap: wrap;
 }
 
 div.lorems p{
+    padding: 15px;
     text-align: justify;
-    width: 40%;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+p#grande{
+    flex-grow: 3;
 }
 
 div.titol{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 3;
 }
 
 footer{
-    flex-grow: 2;
     display: flex;
     justify-content: end;
     align-items: center;
-}
-
-
-@media screen and (max-width: 800px){
-    div.lorems{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    div.lorems p{
-        width: 90%;
-    }
-
 }
