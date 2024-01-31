@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/e18b79c727.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/provesJS.css">
 </head>
-<body>
+<body class="modoDia">
     <h1>El meu primer formulari</h1>
     <form action=".">
         <div>
@@ -29,9 +31,16 @@
             <input type="button" value="Calcula char" id="btnCalculaChar2">
             <input type="text" id="resultadoCalculaChar2" disabled>
         </div>
+
+        <div>
+            <label for="contrasenya">Password:</label>
+            <input type="password" id="contrasenya">
+            <input type="button" value="👁️" id="btnMostraPasswd" class="vermell">
+        </div>
         
     </form>
-    
+
+    <button id="btnCanviMode"><i class="fa-solid fa-sun"></i></button>
 
     <script src="./js/provesJS.js"></script>
 </body>

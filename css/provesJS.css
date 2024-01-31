@@ -1,0 +1,23 @@
+div{
+    margin: 10px 0;
+}
+
+.vermell{background-color: red;}
+.verd{background-color: green;}
+
+#btnCanviMode{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+
+.modoDia{
+    background-color: lightgrey;
+    color: black;
+}
+
+.modoNoche{
+    background-color: darkslategray;
+    color: white;
+}
