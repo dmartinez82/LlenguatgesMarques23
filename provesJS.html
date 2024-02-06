@@ -6,9 +6,10 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/e18b79c727.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/provesJS.css">
+    <script src="./js/provesJS.js" defer></script>
 </head>
 <body class="modoDia">
-    <h1>El meu primer formulari</h1>
+    <h1 id="titol">El meu primer formulari <span>(modo dia)</span></h1>
     <form action=".">
         <div>
             <label for="texte">Texto:</label>
@@ -37,11 +38,29 @@
             <input type="password" id="contrasenya">
             <input type="button" value="👁️" id="btnMostraPasswd" class="vermell">
         </div>
+
+        <div>
+            <label for="nombre">Introduce nombre:</label>
+            <input type="text" id="nom" size="10">
+            <input type="number" id="edad" size="5">
+            <input type="button" value="+" id="btnAfegeixNom" >
+            <input type="button" value="rsul" id="btnMostraResultatNom" >
+            <div id="resulNom">
+                <table id="taulaResultats">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
         
     </form>
 
     <button id="btnCanviMode"><i class="fa-solid fa-sun"></i></button>
-
-    <script src="./js/provesJS.js"></script>
 </body>
 </html>

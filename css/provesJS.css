@@ -21,3 +21,8 @@ div{
     background-color: darkslategray;
     color: white;
 }
+
+#taulaResultats *, #taulaResultats{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
