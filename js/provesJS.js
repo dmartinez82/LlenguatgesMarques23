@@ -4,7 +4,7 @@ _get("#suma").addEventListener("click", suma);
 _get("#btnMostraPasswd").addEventListener("click", () => mostraPassword("#contrasenya", "#btnMostraPasswd"));
 _get("#btnCanviMode").onclick = canviMode;
 _get("#btnAfegeixNom").onclick = afegeixNom;
-_get("#btnMostraResultatNom").onclick = mostraResNom;
+_get("#proves").onclick = proves;
 
 const inputNom = _get("#nom");
 const inputEdad = _get("#edad");
@@ -71,9 +71,12 @@ let indice = 0;
 
 function afegeixNom() {
     let informacion = {
-        id: indice++,
+        id: ++indice,
         nombre: inputNom.value,
-        edad: inputEdad.value
+        edad: inputEdad.value,
+        esCompleto: function(){
+            return this.id && this.nombre && this.edad;
+        }
     };
 
     var trobat = false;
@@ -81,27 +84,48 @@ function afegeixNom() {
         if (elemento.nombre ==   informacion.nombre) trobat = true;
     });
 
-    if (informacion.nombre.length != 0 && informacion.edad.length != 0 && !trobat){
+    if (informacion.esCompleto() && !trobat){
         elementos.push(informacion);
     }
         
     inputNom.value = ""; //limpiamos el input
     inputEdad.value = ""; //limpiamos el input
 
-    mostraResNom();
+    refreshData();
+    
+    inputNom.focus();
+
 }
 
-function mostraResNom() {
+function refreshData() {
+
+    if (elementos.length) divResulNom.classList.remove("dNone");
+    else divResulNom.classList.add("dNone");
+
     let resultado = "";
 
-    elementos.forEach(function(elemento, indice){
-
-    });
-
-
     for (let elemento of elementos) {
-        resultado += `<tr><td>${elemento.id}</td><td>${elemento.nombre}</td><td>${elemento.edad}</td></tr>`;
+        let botonElimina = `<input type="button" value="-" onclick="elimina(${elemento.id})">`;
+        resultado += `<tr><td>${elemento.id}</td><td>${elemento.nombre}</td><td>${elemento.edad}</td><td>${botonElimina}</td></tr>`;
     }
 
     divResulNom.querySelector("tbody").innerHTML = resultado;
+}
+
+function proves(){
+
+}
+
+
+function elimina(id){
+
+    //buscar el elemento con id que nos pasan por parámetro
+    const index = elementos.findIndex(function(elemento){
+        return elemento.id == id;
+    });
+
+    let elementsEsborrats = elementos.splice(index, 1);
+    alert("Element esborrat: " + elementsEsborrats[0].nombre)
+
+    refreshData();
 }

@@ -11,6 +11,32 @@
 <body class="modoDia">
     <h1 id="titol">El meu primer formulari <span>(modo dia)</span></h1>
     <form action=".">
+
+        <div>
+            <label for="nombre">Introduce nombre:</label>
+            <input type="text" id="nom" size="10">
+            <input type="number" id="edad" size="5">
+            <input type="button" value="+" id="btnAfegeixNom" >
+            <input type="button" value="proves" id="proves" >
+            <div id="resulNom" class="dNone">
+                <table id="taulaResultats">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <hr>
+
+
         <div>
             <label for="texte">Texto:</label>
             <input type="text" id="texte" name="texte">
@@ -39,25 +65,7 @@
             <input type="button" value="👁️" id="btnMostraPasswd" class="vermell">
         </div>
 
-        <div>
-            <label for="nombre">Introduce nombre:</label>
-            <input type="text" id="nom" size="10">
-            <input type="number" id="edad" size="5">
-            <input type="button" value="+" id="btnAfegeixNom" >
-            <input type="button" value="rsul" id="btnMostraResultatNom" >
-            <div id="resulNom">
-                <table id="taulaResultats">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Edad</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
+        
         
     </form>
 

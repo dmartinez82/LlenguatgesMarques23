@@ -26,3 +26,7 @@ div{
     border: 1px solid black;
     border-collapse: collapse;
 }
+
+.dNone{
+    display: none;
+}
