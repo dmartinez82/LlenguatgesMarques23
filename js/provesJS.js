@@ -1,19 +1,23 @@
 _get("#btnCalculaChar").addEventListener("click", function () { calculaChar("#texte", "#resultadoCalculaChar"); });
-_get("#btnCalculaChar2").addEventListener("click", function () { calculaChar("#texte2", "#resultadoCalculaChar2"); });
 _get("#suma").addEventListener("click", suma);
 _get("#btnMostraPasswd").addEventListener("click", () => mostraPassword("#contrasenya", "#btnMostraPasswd"));
 _get("#btnCanviMode").onclick = canviMode;
 _get("#btnAfegeixNom").onclick = afegeixNom;
-_get("#proves").onclick = proves;
+_get("#clear").onclick = esborraLocalStorage; 
+document.body.onload = init;
 
 const inputNom = _get("#nom");
 const inputEdad = _get("#edad");
 const divResulNom = _get("#resulNom");
 
-var elementos = [];
-
+//función de alias al querySelector (acortar nombre)
 function _get(elemento) {
     return document.querySelector(elemento);
+}
+
+//función que se ejecuta nada más cargar el body
+function init(){
+    refreshData();
 }
 
 function calculaChar(inputID, outputID) {
@@ -28,7 +32,6 @@ function suma() {
 
     _get("#resultadoSuma").value = primer + segon;
 }
-
 
 function mostraPassword(inputID, btnID) {
     var contrasenya = _get(inputID);
@@ -48,7 +51,6 @@ function mostraPassword(inputID, btnID) {
 }
 
 function canviMode() {
-
     const body = _get("body");
     const icona = _get("#btnCanviMode i");
     const spanModo = _get("#titol span");
@@ -67,11 +69,17 @@ function canviMode() {
     }
 }
 
-let indice = 0;
+/////// Funcionalidades para crear la tabla a partir de los datos 
+/////// introducidos por el usuario y guardarlos en el .localStorage
 
 function afegeixNom() {
+    // en el localStorage almacenamos el índice (se podría recorrer el array tb)
+    let indice = localStorage.getItem("indice");
+    localStorage.setItem("indice", ++indice);
+
+    //generamos el objeto con la información recabada 
     let informacion = {
-        id: ++indice,
+        id: indice,
         nombre: inputNom.value,
         edad: inputEdad.value,
         esCompleto: function(){
@@ -79,53 +87,62 @@ function afegeixNom() {
         }
     };
 
-    var trobat = false;
-    elementos.forEach(function(elemento){
-        if (elemento.nombre ==   informacion.nombre) trobat = true;
-    });
-
+    //Si el elemento está completo y no es duplicado, lo metemos en el array de elementos
+    let trobat = false;
     if (informacion.esCompleto() && !trobat){
-        elementos.push(informacion);
+        let elements = localStorage.getItem("elements");
+        elements = elements?JSON.parse(elements):[];
+        elements.push(informacion);
+        localStorage.setItem("elements", JSON.stringify(elements));
     }
         
-    inputNom.value = ""; //limpiamos el input
-    inputEdad.value = ""; //limpiamos el input
-
-    refreshData();
-    
+    //limpieza
+    inputNom.value = "";
+    inputEdad.value = "";
     inputNom.focus();
 
+    //refrescamos datos
+    refreshData();
 }
 
 function refreshData() {
+    //leemos del localStorage y parseamos el JSON a objeto
+    let elements = localStorage.getItem("elements");
+    elements = elements?JSON.parse(elements):[];
 
-    if (elementos.length) divResulNom.classList.remove("dNone");
+    //si el array está vacío, ocultamos la tabla
+    if (elements.length) divResulNom.classList.remove("dNone");
     else divResulNom.classList.add("dNone");
 
+    //construimos el HTML de toda la tabla
     let resultado = "";
-
-    for (let elemento of elementos) {
+    for (let elemento of elements) {
         let botonElimina = `<input type="button" value="-" onclick="elimina(${elemento.id})">`;
         resultado += `<tr><td>${elemento.id}</td><td>${elemento.nombre}</td><td>${elemento.edad}</td><td>${botonElimina}</td></tr>`;
     }
 
+    //actualizamos el DOM
     divResulNom.querySelector("tbody").innerHTML = resultado;
 }
 
-function proves(){
-
-}
-
-
 function elimina(id){
+    //leemos del localStorage y parseamos el JSON a objeto
+    let elements = localStorage.getItem("elements");
+    elements = elements?JSON.parse(elements):[];
 
     //buscar el elemento con id que nos pasan por parámetro
-    const index = elementos.findIndex(function(elemento){
-        return elemento.id == id;
-    });
+    const index = elements.findIndex((elemento) => elemento.id == id);
 
-    let elementsEsborrats = elementos.splice(index, 1);
+    let elementsEsborrats = elements.splice(index, 1);
     alert("Element esborrat: " + elementsEsborrats[0].nombre)
 
+    //actualizamos localStorage
+    localStorage.setItem("elements", JSON.stringify(elements));
+
+    refreshData();
+}
+
+function esborraLocalStorage(){
+    localStorage.clear();
     refreshData();
 }

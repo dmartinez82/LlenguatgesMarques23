@@ -17,7 +17,6 @@
             <input type="text" id="nom" size="10">
             <input type="number" id="edad" size="5">
             <input type="button" value="+" id="btnAfegeixNom" >
-            <input type="button" value="proves" id="proves" >
             <div id="resulNom" class="dNone">
                 <table id="taulaResultats">
                     <thead>
@@ -29,13 +28,16 @@
                         </tr>
                     </thead>
                     <tbody></tbody>
+                    <tfoot>
+                        <tr >
+                            <td colspan ="4"><input type="button" value="Clear" id="clear"></td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
 
-
         <hr>
-
 
         <div>
             <label for="texte">Texto:</label>
@@ -50,13 +52,6 @@
             <input type="number" name="segon" id="segon">
             <span>=</span>
             <input type="number" name="resultadoSuma" id="resultadoSuma" disabled>
-        </div>
-
-        <div>
-            <label for="texte">Texto:</label>
-            <input type="text" id="texte2" name="texte">
-            <input type="button" value="Calcula char" id="btnCalculaChar2">
-            <input type="text" id="resultadoCalculaChar2" disabled>
         </div>
 
         <div>
