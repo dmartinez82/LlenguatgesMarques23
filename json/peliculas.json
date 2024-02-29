@@ -1,0 +1,33 @@
+{
+    "peliculas": [
+      {
+        "titulo": "El Padrino",
+        "director": "Francis Ford Coppola",
+        "año": 1973,
+        "genero": ["Crimen", "Drama"],
+        "actores": ["Marlon Brando", "Al Pacino", "James Caan", "Daniel Martínez"]
+      },
+      {
+        "titulo": "Forrest Gump",
+        "director": "Robert Zemeckis",
+        "año": 1994,
+        "genero": ["Comedia", "Drama", "Romance"],
+        "actores": ["Tom Hanks", "Robin Wright", "Gary Sinise"]
+      },
+      {
+        "titulo": "El Rey León",
+        "director": "Rob Minkoff",
+        "año": 1994,
+        "genero": ["Animación", "Aventura", "Drama"],
+        "actores": ["Matthew Broderick", "Jeremy Irons", "James Earl Jones"]
+      },
+      {
+        "titulo": "La La Land",
+        "director": "Damien Chazelle",
+        "año": 2016,
+        "genero": ["Comedia", "Drama", "Musical"],
+        "actores": ["Ryan Gosling", "Emma Stone", "John Legend"]
+      }
+    ]
+  }
+  
