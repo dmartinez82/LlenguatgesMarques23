@@ -5,7 +5,7 @@ const footer = document.querySelector("footer");
 
 btnCarregaAleatori.onclick = carrega; 
 
-const MI_CLAVE = "DkrQz2kULazmeaIBEpAaH7qSBRt7welt3OnQ858ZYgc";
+const MI_CLAVE = ""; //posau aquí la vostra clau. 
 
 function carrega(){
 
