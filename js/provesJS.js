@@ -9,6 +9,7 @@ document.body.onload = init;
 const inputNom = _get("#nom");
 const inputEdad = _get("#edad");
 const divResulNom = _get("#resulNom");
+const labelReloj = document.querySelector("#reloj");
 
 //función de alias al querySelector (acortar nombre)
 function _get(elemento) {
@@ -145,4 +146,24 @@ function elimina(id){
 function esborraLocalStorage(){
     localStorage.clear();
     refreshData();
+}
+
+document.body.onload = reloj;
+
+let intervalo;
+function reloj(){
+    let segundos = 50;
+    let minutos = 0;
+    intervalo = setInterval(function(){
+        segundos++;
+        if (segundos == 60){
+            segundos = 0;
+            minutos++;
+        }
+        if (minutos==2){
+            clearInterval(intervalo); //aturam
+        }
+        labelReloj.textContent = `${minutos.toString().padStart(2, "0")}:${segundos.toString().padStart(2, "0")}`;
+        
+    }, 1000);
 }
