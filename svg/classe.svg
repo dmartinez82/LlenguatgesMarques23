@@ -1,0 +1,51 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    
+    <!-- <symbol id="agrupacion">
+        <circle class="circulo" cx="50" cy="50" r="40" stroke-width="2">
+        </circle>
+        <rect width="40" height="40" x="50" y="50" stroke-width="2" fill="none" stroke="aliceblue" />
+    </symbol> -->
+
+    <use href="#agrupacion" x="10" y="10">
+        <animateTransform attributeName="transform" id="crecer"
+             type="scale"
+             from="0 0"
+             to="1 1"
+             begin="0s; decrecer.end"
+             dur="2s"
+             repeatCount="freeze"
+        />
+        <animateTransform attributeName="transform" id="decrecer"
+             type="scale"
+             from="1 1"
+             to="0 0"
+             begin="crecer.end"
+             dur="2s"
+             repeatCount="freeze"
+        />
+    </use>
+
+    
+
+
+    <rect x="30" y="30" height="40" width="40" style="stroke:green;fill:red">
+        <animateTransform
+          attributeName="transform"
+          begin="0s"
+          dur="10s"
+          type="rotate"
+          from="0 50 50"
+          to="360 50 50"
+          repeatCount="indefinite" />
+      </rect>
+    
+      <circle cx="50" cy="50" r="1" stroke="aliceblue"/>
+
+
+    <style>
+        .circulo {
+            fill: none;
+            stroke: yellow;
+        }
+    </style>
+</svg>

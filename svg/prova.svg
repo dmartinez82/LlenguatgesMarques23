@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+    <rect width="400" height="400" fill="lightblue" />
+
+    <symbol id="linea">
+        <path d="M 150 380 q -50 -200 60 -300" stroke-width="40" fill="none" />
+    </symbol>
+
+    <use x="50" y="10" href="#linea" stroke="brown" />
+
+    <use x="0" y="0" href="#linea" transform="rotate(70 100 100)" stroke="red" />
+
+    <use x="50" y="10" href="#linea" transform="rotate(90 200 120) translate(-36 45) scale(1 0.5)" stroke="green" />
+
+    <use x="50" y="10" href="#linea" transform="rotate(124 210 120) translate(-36 45) scale(1 0.5)" stroke="green" />
+
+    <use x="50" y="10" href="#linea" 
+    transform="rotate(45 200 120) translate(10 40) scale(1 -0.5) translate(0, -240)" stroke="green"/>
+    
+
+    <!-- <circle cx="50%" cy="500%" r="420%" fill="sandybrown" /> -->
+</svg>
