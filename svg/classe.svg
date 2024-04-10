@@ -1,5 +1,5 @@
 <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-    
+
     <!-- <symbol id="agrupacion">
         <circle class="circulo" cx="50" cy="50" r="40" stroke-width="2">
         </circle>
@@ -7,49 +7,36 @@
     </symbol> -->
 
     <use href="#agrupacion" x="10" y="10">
-        <animateTransform attributeName="transform" id="crecer"
-             type="scale"
-             from="0 0"
-             to="1 1"
-             begin="0s; decrecer.end"
-             dur="2s"
-             repeatCount="freeze"
-        />
-        <animateTransform attributeName="transform" id="decrecer"
-             type="scale"
-             from="1 1"
-             to="0 0"
-             begin="crecer.end"
-             dur="2s"
-             repeatCount="freeze"
-        />
+        <animateTransform attributeName="transform" id="crecer" type="scale" from="0 0" to="1 1"
+            begin="0s; decrecer.end" dur="2s" repeatCount="freeze" />
+        <animateTransform attributeName="transform" id="decrecer" type="scale" from="1 1" to="0 0" begin="crecer.end"
+            dur="2s" repeatCount="freeze" />
     </use>
 
-    <path
-    id="path1"
-    d="M100,200 C 100,50 350,425 350,200"
-    fill="none"
-    stroke="blue"
-    stroke-width="7.06" />
+    <path id="path1" d="M100,200 C 100,50 350,425 350,200" fill="none" stroke="blue" stroke-width="7.06" />
 
 
     <rect x="30" y="30" height="40" width="40" style="stroke:green;fill:red" id="rectangulo">
-        <animateTransform
-          attributeName="transform"
-          begin="0s"
-          dur="10s"
-          type="rotate"
-          from="0 50 50"
-          to="360 50 50"
-          repeatCount="indefinite" />
+        <animateTransform attributeName="transform" begin="0s" dur="10s" type="rotate" from="0 170 170" to="360 170 170"
+            repeatCount="indefinite" />
 
-          <animateMotion dur="6s" repeatCount="indefinite" >
+        <!-- <animateMotion dur="6s" repeatCount="indefinite" >
             <mpath href="#path1" />
-          </animateMotion>
-      </rect>
-    
-      <circle cx="50" cy="50" r="1" stroke="aliceblue"/>
+          </animateMotion> -->
+    </rect>
 
+    <circle cx="170" cy="170" r="1" stroke="black" fill="black" />
+
+    <text x="45" y="45" fill="red" style="font-family: Tahoma" font-size="35">I love SVG!</text>
+
+    <rect x="130" y="30" height="40" width="40" style="stroke:green;fill:yellow" id="rectangulo1">
+        <animate attributeName="y" begin="0s;animrect12.end" dur="5s" from="30" to="130" repeatCount="freeze" id="animrect11" />
+        <animate attributeName="y" begin="animrect11.end" dur="5s" from="130" to="30" repeatCount="freeze" id="animrect12"/>
+    </rect>
+    <rect x="30" y="130" height="40" width="40" style="stroke:green;fill:green" id="rectangulo2">
+        <animate attributeName="y" begin="0s;animrect22.end" dur="5s" from="130" to="30" repeatCount="freeze" id="animrect21"/>
+        <animate attributeName="y" begin="animrect21.end" dur="5s" from="30" to="130" repeatCount="freeze" id="animrect22"/>
+    </rect>
 
     <style>
         .circulo {
