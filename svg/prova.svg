@@ -13,9 +13,25 @@
 
     <use x="50" y="10" href="#linea" transform="rotate(124 210 120) translate(-36 45) scale(1 0.5)" stroke="green" />
 
-    <use x="50" y="10" href="#linea" 
-    transform="rotate(45 200 120) translate(10 40) scale(1 -0.5) translate(0, -240)" stroke="green"/>
-    
+    <use x="50" y="10" href="#linea" transform="rotate(45 200 120) translate(10 40) scale(1 -0.5) translate(0, -240)"
+        stroke="green" />
 
-    <!-- <circle cx="50%" cy="500%" r="420%" fill="sandybrown" /> -->
+    <symbol id="cercle">
+        <circle cx="100" cy="100" r="60" stroke="black" />
+    </symbol>
+
+    <defs>
+        <radialGradient id="myGradient">
+          <stop offset="0%" stop-color="white" />
+          <stop offset="85%" stop-color="orange" />
+          <stop offset="100%" stop-color="black" />
+        </radialGradient>
+      </defs>
+
+    <use x="0" y="0" href="#cercle" fill="red" />
+    <use x="140" y="140" href="#cercle" fill="url(#myGradient)" />
+
+
+
+
 </svg>
