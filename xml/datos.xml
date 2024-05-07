@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="estilo.xsl"?>
+<empleados
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="esquema.xsd">
+    <empleado id="1">
+        <nombre perfil="http://linkedin.es/perfilfalso">Juan Pérez</nombre>
+        <departamento>Recursos Humanos</departamento>
+        <habilidades>
+            <habilidad>Comunicación</habilidad>
+            <habilidad>Negociación</habilidad>
+        </habilidades>
+        <imagenPerfil location="./img/perfil1.webp"/>
+    </empleado>
+    <empleado id="2">
+        <nombre>María López</nombre>
+        <departamento>Finanzas</departamento>
+        <habilidades>
+            <habilidad>Análisis financiero</habilidad>
+        </habilidades>
+        <imagenPerfil location="./img/perfil1.webp"/>
+    </empleado>
+    <empleado id="3">
+        <nombre>Luisa Fernández</nombre>
+        <departamento>Marketing</departamento>
+        <habilidades>
+            <habilidad>SEO</habilidad>
+            <habilidad>Publicidad digital</habilidad>
+            <habilidad>Redes sociales</habilidad>
+        </habilidades>
+        <imagenPerfil location="./img/perfil2.webp"/>
+    </empleado>
+    <empleado id="4">
+        <nombre perfil="http://linkedin.es/perfilfalso2">Carlos Gómez</nombre>
+        <departamento>Recursos Humanos</departamento>
+        <habilidades />
+        <imagenPerfil location="./img/perfil3.webp"/>
+    </empleado>
+    <empleado id="5">
+        <nombre perfil="">Sandra Martínez</nombre>
+        <departamento>TI</departamento>
+        <imagenPerfil location=""/>
+    </empleado>
+</empleados>
