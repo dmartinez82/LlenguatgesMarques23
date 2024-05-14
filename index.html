@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,15 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" type="image/x-icon" href="./img/TheSwan.png" />
     <script src="https://kit.fontawesome.com/e18b79c727.js" crossorigin="anonymous"></script>
+    <link rel="manifest" href="./manifest.json">
 </head>
+
 <body>
 
     <img src="./img/logoliceweb2.png" alt="Logo Liceu" title="Logo escola">
 
     <div class="banner">
-        <h2>Índex de pràctiques 
+        <h2>Índex de pràctiques
             <span id="corazones">
                 <i id="corazonVacio" class="fa-regular fa-heart"></i>
                 <i id="corazonLleno" class="fa-solid fa-heart"></i>
@@ -34,6 +37,18 @@
         <li><a href="./xml/datos.xml">XML</a></li>
         <li class="secret"><a class="secret" href="https://t.ly/h0QaK" target="_blank">Examen</a></li>
     </ol>
-    
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js').then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
 </body>
+
 </html>
