@@ -1,7 +1,7 @@
 {
     "name": "LLM Dani",
     "short_name": "LLM Dani",
-    "start_url": ".",
+    "start_url": "..",
     "display": "standalone",
     "background_color": "#ffebcd",
     "theme_color": "#6c9ecc",

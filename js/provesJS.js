@@ -3,7 +3,7 @@ _get("#suma").addEventListener("click", suma);
 _get("#btnMostraPasswd").addEventListener("click", () => mostraPassword("#contrasenya", "#btnMostraPasswd"));
 _get("#btnCanviMode").onclick = canviMode;
 _get("#btnAfegeixNom").onclick = afegeixNom;
-_get("#clear").onclick = esborraLocalStorage; 
+_get("#clear").onclick = esborraLocalStorage;
 document.body.onload = init;
 
 const inputNom = _get("#nom");
@@ -11,13 +11,28 @@ const inputEdad = _get("#edad");
 const divResulNom = _get("#resulNom");
 const labelReloj = document.querySelector("#reloj");
 
+function sum(a, b, ...parametros) {
+    let resultado = a +b;
+    for (const parametro of parametros) {
+      resultado += parametro;
+    }
+    return resultado;
+  }
+  
+  console.log(sum(1, 4, "2", 3, 9));
+  // Expected output: 6
+  
+  console.log(sum(1, 2, 3, 4));
+  // Expected output: 10
+  
+
 //función de alias al querySelector (acortar nombre)
 function _get(elemento) {
     return document.querySelector(elemento);
 }
 
 //función que se ejecuta nada más cargar el body
-function init(){
+function init() {
     refreshData();
 }
 
@@ -83,20 +98,20 @@ function afegeixNom() {
         id: indice,
         nombre: inputNom.value,
         edad: inputEdad.value,
-        esCompleto: function(){
+        esCompleto: function () {
             return this.id && this.nombre && this.edad;
         }
     };
 
     //Si el elemento está completo y no es duplicado, lo metemos en el array de elementos
     let trobat = false;
-    if (informacion.esCompleto() && !trobat){
+    if (informacion.esCompleto() && !trobat) {
         let elements = localStorage.getItem("elements");
-        elements = elements?JSON.parse(elements):[];
+        elements = elements ? JSON.parse(elements) : [];
         elements.push(informacion);
         localStorage.setItem("elements", JSON.stringify(elements));
     }
-        
+
     //limpieza
     inputNom.value = "";
     inputEdad.value = "";
@@ -109,7 +124,7 @@ function afegeixNom() {
 function refreshData() {
     //leemos del localStorage y parseamos el JSON a objeto
     let elements = localStorage.getItem("elements");
-    elements = elements?JSON.parse(elements):[];
+    elements = elements ? JSON.parse(elements) : [];
 
     //si el array está vacío, ocultamos la tabla
     if (elements.length) divResulNom.classList.remove("dNone");
@@ -126,10 +141,10 @@ function refreshData() {
     divResulNom.querySelector("tbody").innerHTML = resultado;
 }
 
-function elimina(id){
+function elimina(id) {
     //leemos del localStorage y parseamos el JSON a objeto
     let elements = localStorage.getItem("elements");
-    elements = elements?JSON.parse(elements):[];
+    elements = elements ? JSON.parse(elements) : [];
 
     //buscar el elemento con id que nos pasan por parámetro
     const index = elements.findIndex((elemento) => elemento.id == id);
@@ -143,7 +158,7 @@ function elimina(id){
     refreshData();
 }
 
-function esborraLocalStorage(){
+function esborraLocalStorage() {
     localStorage.clear();
     refreshData();
 }
@@ -151,19 +166,42 @@ function esborraLocalStorage(){
 document.body.onload = reloj;
 
 let intervalo;
-function reloj(){
+function reloj() {
     let segundos = 50;
     let minutos = 0;
-    intervalo = setInterval(function(){
+    intervalo = setInterval(function () {
         segundos++;
-        if (segundos == 60){
+        if (segundos == 60) {
             segundos = 0;
             minutos++;
         }
-        if (minutos==2){
+        if (minutos == 2) {
             clearInterval(intervalo); //aturam
         }
         labelReloj.textContent = `${minutos.toString().padStart(2, "0")}:${segundos.toString().padStart(2, "0")}`;
-        
+
     }, 1000);
 }
+
+
+const obj = {propiedad: "valor"}
+const original = [1, 2, 3, "hola", obj];
+const duplicado = [...original];
+
+original[2] = 4;
+original[4].nuevapropiedad = "pepito";
+
+console.log(original);
+console.log(duplicado);
+
+
+const CONSTANTE= [];
+CONSTANTE.push("hola");
+
+let mapa  = new Map();
+mapa.set(1, "hola");
+mapa.set(2, "adios");
+
+console.log(mapa);
+
+console.log(mapa.keys)
